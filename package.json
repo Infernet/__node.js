@@ -1,0 +1,26 @@
+{
+  "name": "node_project",
+  "version": "1.0.0",
+  "description": "the tutorial project node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Infernet/__node.js.git"
+  },
+  "keywords": [
+    "node.js"
+  ],
+  "author": "Infernet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Infernet/__node.js/issues"
+  },
+  "homepage": "https://github.com/Infernet/__node.js#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
