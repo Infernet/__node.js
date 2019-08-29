@@ -1,0 +1,25 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(48, 48, 92);
+}
+
+#pause {
+    padding: 10px 40px;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 10px auto;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(48, 48, 92);
+    float: right;
+}
+
+#start {
+    padding: 10px 40px;
+    font-size: 26px;
+    font-weight: bold;
+    margin: 10px auto;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(48, 48, 92);
+}
