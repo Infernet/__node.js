@@ -24,9 +24,11 @@
   "homepage": "https://github.com/Infernet/__node.js#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
     "express": "^4.17.1",
     "hbs": "^4.0.4",
     "jquery": "^3.4.1",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "pug": "^2.0.4"
   }
 }

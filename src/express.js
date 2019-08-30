@@ -10,62 +10,107 @@ const jsonParser = express.json();
 
 
 // устанавливаем настройки для файлов layout
-app.engine("hbs", expressHbs({
-    layoutsDir: "views/layouts",
-    defaultLayout: "layout",
-    extname: "hbs",
-}));
+// app.engine("hbs", expressHbs({
+//     layoutsDir: "templates/layouts",
+//     defaultLayout: "layout",
+//     extname: "hbs",
+//     helpers: {
+//         getTime: () => {
+//             let myDate = new Date();
+//             let hour = myDate.getHours();
+//             let min = myDate.getMinutes();
+//             let sec = myDate.getSeconds();
 
-app.set("view engine", "hbs");
-//app.set("views", "templates");
-hbs.registerPartials("./views/partials");
+//             if (min < 10)
+//                 min = '0' + min;
+//             if (sec < 10)
+//                 sec = '0' + sec;
+//             let res = `Текущее время: ${hour}:${min}:${sec}`;
+//             return res;
+//         },
+//         createStringList: (array) => {
+//             var result = "";
+//             for (var i = 0; i < array.length; i++) {
+//                 result += "<li>" + array[i] + "</li>";
+//             }
+//             return new hbs.SafeString("<ul>" + result + "</ul>");
+//         }
+//     }
+// }));
 
-hbs.registerHelper('getTime', () => {
-    let myDate = new Date();
-    let hour = myDate.getHours();
-    let min = myDate.getMinutes();
-    let sec = myDate.getSeconds();
-
-    if (min < 10)
-        min = '0' + min;
-    if (sec < 10)
-        sec = '0' + sec;
-    let res = `Текущее время: ${hour}:${min}:${sec}`;
-    return res;
-});
-
-console.log(hbs.handlebars.helpers.getTime());
-
-
-app.use('/static/', express.static(__dirname + "/../public"));
+// app.set("view engine", "hbs");
+// app.set("views", "templates");
+// hbs.registerPartials("./templates/partials");
 
 
-// app.use(function(request, response, next) {
+// app.set('view engine', 'handlebars');
 
-//     let now = new Date();
-//     let hour = now.getHours();
-//     let minutes = now.getMinutes();
-//     let seconds = now.getSeconds();
-//     let data = `${hour}:${minutes}:${seconds} ${request.method} ${request.url} ${request.get("user-agent")}`;
-//     console.log(data);
-//     fs.appendFile("./logs/server.log", data + "\n", function() {});
-//     next();
+
+
+
+
+
+
+// app.use('/contact', (req, res) => {
+//     res.render("contact.hbs", {
+//         title: 'Мои контакты',
+//         emailsVisible: true,
+//         emails: ["gavgav@mycorp.com", "mioaw@mycorp.com"],
+//         phone: '+8-(800)-535-35-35'
+//     });
 // });
 
+// app.use("/home", (req, res) => {
+//     res.render("home.hbs", {
+//         fruit: ["apple", "lemon", "banana", "grape"]
+//     });
+// });
+
+
+// app.set("view engine", "ejs");
+
+// app.use('/contact', (req, res) => {
+//     res.render("contact", {
+//         title: "Мои контакты",
+//         emails: ["gavgav@mycorp.com", "mioaw@mycorp.com"],
+//         phone: "+1234567890"
+//     });
+// })
+
+
+app.set('view engine', 'pug');
 app.use('/contact', (req, res) => {
-    res.render("contact.hbs", {
-        title: 'Мои контакты',
-        emailsVisible: true,
+    res.render('contact', {
+        title: "Мои контакты",
         emails: ["gavgav@mycorp.com", "mioaw@mycorp.com"],
-        phone: '+8-(800)-535-35-35'
+        phone: "+1234567890"
     });
 });
 
-app.use("/home", (req, res) => {
-    res.render("home.hbs");
+
+
+
+
+
+
+
+
+
+
+
+
+app.use('/static/', express.static(__dirname + "/../public"));
+app.use(function(request, response, next) {
+
+    let now = new Date();
+    let hour = now.getHours();
+    let minutes = now.getMinutes();
+    let seconds = now.getSeconds();
+    let data = `${hour}:${minutes}:${seconds} ${request.method} ${request.url} ${request.get("user-agent")}`;
+    console.log(data);
+    fs.appendFile("./logs/server.log", data + "\n", function() {});
+    next();
 });
-
-
 
 
 app.get('/register', urlencodedParser, (req, res) => {

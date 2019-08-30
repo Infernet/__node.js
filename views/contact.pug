@@ -1,0 +1,19 @@
+extends layout.pug
+block title 
+        title #{title}
+block content
+    h1 #{title} в Pug
+      
+    if emails.length>0
+        h3 Электронные адреса
+        ul
+            each email in emails
+                li #{email}
+        
+    else
+        h3 Электроннный адрес отсутствует
+    p Телефон: #{phone}
+
+    ul
+      each val, index in {1:'one',2:'two',3:'three'}
+        li= index + ': ' + val
