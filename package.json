@@ -2,12 +2,11 @@
   "name": "node_project",
   "version": "1.0.0",
   "description": "the tutorial project node.js",
-  "main": "server.js",
+  "main": "src/data/Sequelize.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "PORT=3000 HOST='127.0.0.1' node src/server.js",
-    "startNodemon": "PORT=3000 HOST='127.0.0.1' nodemon src/server.js",
-    "s_express": "PORT=3000 HOST='127.0.0.1' nodemon src/express.js"
+    "start": "PORT=3000 HOST='127.0.0.1' nodemon src/Sequelize.js"
   },
   "repository": {
     "type": "git",
@@ -25,8 +24,10 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "hbs": "^4.0.4",
     "jquery": "^3.4.1",
     "mysql2": "^1.7.0",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "sequelize": "^5.18.0"
   }
 }
