@@ -28,6 +28,8 @@
     "jquery": "^3.4.1",
     "mysql2": "^1.7.0",
     "nodemon": "^1.19.1",
-    "sequelize": "^5.18.0"
+    "sequelize": "^5.18.0",
+    "sequelize-auto-migrations": "^1.0.3",
+    "sequelize-cli": "^5.5.1"
   }
 }

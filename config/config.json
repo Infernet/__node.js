@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "infernet",
+    "password": "admin",
+    "database": "dev_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "infernet",
+    "password": "admin",
+    "database": "dev_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "infernet",
+    "password": "admin",
+    "database": "dev_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }
+}
