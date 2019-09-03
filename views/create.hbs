@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Добавление пользователя</title>
+    <meta charset="utf-8"/>
     <style>
-        .field {
+        #name, #age {
             width: 180px;
         }
     </style>
 </head>
 <body>
 <h1>Добавление пользователя</h1>
-<form method="POST">
-    <label for="">Имя</label><br>
-    <input type="text" name="name" class="field"><br><br>
-    <label>Возраст</label><br>
-    <input type="number" name="age" class="field" min="1" max="110"><br><br>
-    <input type="submit" value="Отправить">
+<form action="postUser" method="POST">
+    <label for="name">Имя</label><br>
+    <input name="name" id="name"/><br><br>
+    <label for="age">Возраст</label><br>
+    <input name="age" type="number" id="age" min="1" max="110"/><br><br>
+    <input type="submit" value="Отправить"/>
 </form>
 <br>
-<br>
-<br>
-<a href="/">К списку пользователей</a>
+<a href="/users">К списку пользователей</a>
 </body>
-</html>
+<html>

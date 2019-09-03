@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Список пользователей</title>
+</head>
+<body>
+<a href="/users/create">Добавить пользователя</a>
+<table>
+    <tr>
+        <th>Имя</th>
+        <th>Возраст</th>
+    </tr>
+    {{#each users}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.age}}</td>
+        </tr>
+    {{/each}}
+</table>
+</body>
+</html>
