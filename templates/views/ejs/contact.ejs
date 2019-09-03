@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <%- include("partials/menu.ejs") %>
+        <h1>
+            <%=title %> в EJS</h1>
+        <% if(emails.length>0) {%>
+            <h3>Электронные адреса</h3>
+            <ul>
+                <% for(var i=0;i<emails.length; i++) {%>
+                    <li>
+                        <%= emails[i] %>
+                    </li>
+                    <%} %>
+            </ul>
+
+            <%} else{%>
+                <h3>Электронный адрес отсутствует</h3>
+                <%} %>
+                    <p>Телефон:
+                        <%= phone %>
+                    </p>
+                    <%- include('partials/footer.ejs') %>
+</body>
+
+</html>

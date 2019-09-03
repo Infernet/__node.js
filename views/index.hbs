@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Список пользователей</title>
+</head>
+<body>
+    <h1>Список пользователей</h1>
+    <p><a href="/create">Добавить пользователя</a></p>
+    <table>
+        <tr><th>Name</th><th>Age</th><th></th></tr>
+        {{#each users}}
+                <tr>
+                    <td>{{this.name}}</td>
+                    <td>{{this.age}}</td>
+                    <td>
+                        <a href="/edit/{{this.id}}">Edit</a>
+                        <form action="delete/{{this.id}}" method="POST" style="display:inline;">
+                            <input type="submit" value="Delete">
+                        </form>
+                    </td>
+                </tr>
+        {{/each}}
+    </table>
+</body>
+</html>
